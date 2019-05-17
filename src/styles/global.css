@@ -1,0 +1,61 @@
+html, body {
+  overflow: hidden;
+}
+
+html body {
+  background: rgb(13, 34, 71);
+}
+
+.bg_skewed {
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+  animation-name: outer;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+}
+
+.unskewed {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  /* opacity: 0.5; */
+  animation-name: inner;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  background: rgb(173, 173, 173);
+  left: -50%;
+}
+
+@keyframes outer {
+  0% {
+    transform: skew(-20deg, 0deg) translate(0, 0)
+  }
+  33% {
+    transform: skew(-20deg, 0deg) translate(-50px, 0)
+  }
+  66% {
+    transform: skew(-20deg, 0deg) translate(50px, 0)
+  }
+  100% {
+    transform: skew(-20deg, 0deg) translate(0, 0)
+  }
+}
+
+@keyframes inner {
+  0% {
+    transform: skew(20deg, 0deg) translate(0, 0)
+  }
+  33% {
+    transform: skew(20deg, 0deg) translate(50px, 0)
+  }
+  66% {
+    transform: skew(20deg, 0deg) translate(-50px, 0)
+  }
+  100% {
+    transform: skew(20deg, 0deg) translate(0, 0)
+  }
+}
+
