@@ -1,9 +1,9 @@
 import React from 'react'
 
 const Background = () => (
-    <div class="bg">
-        <div class="bg_skewed">
-            <div class="unskewed" />
+    <div className="bg">
+        <div className="bg_skewed">
+            <div className="unskewed" />
         </div>
     </div>
 )
