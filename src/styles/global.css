@@ -57,6 +57,7 @@ html body {
   /* background: rgba(80, 80, 80, 0.2); */
   background: rgb(180, 180, 180);
   transform: skew(-20deg, 0deg) translate(40%, 0);
+  box-shadow: 5px 0px 30px 5px rgb(50, 50, 50) inset;
 }
 
 @keyframes slide {
