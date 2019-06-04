@@ -83,7 +83,7 @@ class Main extends React.Component {
         >
           <h2 className="major">Resume</h2>
           <div id="resume-wrapper">
-            <iframe src={resume} />
+            <object data={resume} type="application/pdf" />
           </div>
           {close}
         </article>
