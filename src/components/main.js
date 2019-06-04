@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import pic02 from '../images/pic02.jpg'
+import resume from '../RESUME - Vincent Widjaya.pdf'
 
 class Main extends React.Component {
   render() {
@@ -9,46 +10,81 @@ class Main extends React.Component {
     let close = <div className="close" onClick={() => {this.props.onCloseArticle()}}></div>
 
     return (
-      <div ref={this.props.setWrapperRef} id="main" style={this.props.timeout ? {display: 'flex'} : {display: 'none'}}>
-
-        <article id="about" className={`${this.props.article === 'about' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
+      <div
+        ref={this.props.setWrapperRef}
+        id="main"
+        style={this.props.timeout ? { display: 'flex' } : { display: 'none' }}
+      >
+        <article
+          id="about"
+          className={`${this.props.article === 'about' ? 'active' : ''} ${
+            this.props.articleTimeout ? 'timeout' : ''
+          }`}
+          style={{ display: 'none' }}
+        >
           <h2 className="major">About Me</h2>
-          <p>Hi! My name is Vincent, and I'm an Informatics major at the University of Washington (Seattle), graduating June 2020. My concentration is in Data Science but I am also heavily into software development. I take various computer science courses at UW to supplement my career pursuit in both domains.</p>
-          <p>In the summer of 2017, I interned at <strong>Uber</strong> as a data scientist. In 2018, I interned at a small startup that develops software for other companies, for internal and/or external operations. This year, I will be interning as a Full Stack Engineer at <strong>GO-JEK</strong>, Indonesia's ride-hailing service which has has become Southeast Asia's second and Indonesia's first decacorn, now hosting a multitude of microservices and startups.</p>
+          <p>
+            Hi! My name is Vincent, and I'm an Informatics major at the
+            University of Washington (Seattle), graduating June 2020. My
+            concentration is in Data Science but I am also heavily into software
+            development. I take various computer science courses at UW to
+            supplement my career pursuit in both domains.
+          </p>
+          <p>
+            In the summer of 2017, I interned at <strong>Uber</strong> as a data
+            scientist. In 2018, I interned at a small startup that develops
+            software for other companies, for internal and/or external
+            operations.
+          </p>
+          <p>
+            This summer, I am interning as a Full Stack Engineer at{' '}
+            <strong>GO-JEK</strong>, Indonesia's ride-hailing service which has
+            has become Southeast Asia's second and Indonesia's first decacorn,
+            hosting a multitude of microservices and startups.
+          </p>
           {close}
         </article>
 
-        <article id="projects" className={`${this.props.article === 'projects' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
+        <article
+          id="projects"
+          className={`${this.props.article === 'projects' ? 'active' : ''} ${
+            this.props.articleTimeout ? 'timeout' : ''
+          }`}
+          style={{ display: 'none' }}
+        >
           <h2 className="major">Projects</h2>
-          <span className="image main"><img src={pic02} alt="" /></span>
-          <p>Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.</p>
-          <p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat tempus.</p>
+          <span className="image main">
+            <img src={pic02} alt="" />
+          </span>
+          <p>
+            Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu,
+            at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent
+            urna nisi, fringila lorem et vehicula lacinia quam. Integer
+            sollicitudin mauris nec lorem luctus ultrices.
+          </p>
+          <p>
+            Nullam et orci eu lorem consequat tincidunt vivamus et sagittis
+            libero. Mauris aliquet magna magna sed nunc rhoncus pharetra.
+            Pellentesque condimentum sem. In efficitur ligula tate urna.
+            Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor.
+            Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis
+            libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat
+            tempus.
+          </p>
           {close}
         </article>
 
-        <article id="resume" className={`${this.props.article === 'resume' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
+        <article
+          id="resume"
+          className={`${this.props.article === 'resume' ? 'active' : ''} ${
+            this.props.articleTimeout ? 'timeout' : ''
+          }`}
+          style={{ display: 'none' }}
+        >
           <h2 className="major">Resume</h2>
-          <form method="post" action="#">
-            <div className="field half first">
-              <label htmlFor="name">Name</label>
-              <input type="text" name="name" id="name" />
-            </div>
-            <div className="field half">
-              <label htmlFor="email">Email</label>
-              <input type="text" name="email" id="email" />
-            </div>
-            <div className="field">
-              <label htmlFor="message">Message</label>
-              <textarea name="message" id="message" rows="4"></textarea>
-            </div>
-            <ul className="actions">
-              <li><input type="submit" value="Send Message" className="special" /></li>
-              <li><input type="reset" value="Reset" /></li>
-            </ul>
-          </form>
+          <iframe src={resume} />
           {close}
         </article>
-
       </div>
     )
   }
