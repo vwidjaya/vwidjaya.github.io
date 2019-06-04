@@ -82,7 +82,9 @@ class Main extends React.Component {
           style={{ display: 'none' }}
         >
           <h2 className="major">Resume</h2>
-          <iframe src={resume} />
+          <div id="resume-wrapper">
+            <iframe src={resume} />
+          </div>
           {close}
         </article>
       </div>
