@@ -84,13 +84,13 @@ html body {
 }
 
 #resume {
-  width: 100%;
-  height: 80vh;
+  height: 90vh;
 }
 
 #resume-wrapper {
   width: 100%;
-  height: 85%;
+  height: 100%;
+  padding-bottom: 3rem;
   overflow: scroll;
 }
 
